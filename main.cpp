@@ -19,8 +19,8 @@ int main(){
         if(inp[i][2]>inp[i][4]) mg=1; else mg=3;
         if(inp[i-1][2]>inp[i-1][4]) yg=1; else yg=3;
         // printf("%d : %d %d\n",i,yg,mg);
-        if(arr[ai-2][1]+inp[i-1][yg]+inp[i][mg]<=k){
-            // printf("%d : %d\n",i,arr[ai-2][1]+inp[i-1][yg]+inp[i][mg]);
+        if(arr[ai-2][1]+inp[i-1][yg]+inp[i][mg]<k){
+            printf("g ok %d\n",i);
             arr[ai-1][1]=arr[ai-2][1]+inp[i-1][yg];
             arr[ai-1][2]=arr[ai-2][2]+inp[i-1][yg+1];
         }
@@ -31,13 +31,13 @@ int main(){
                printf("use pass %d\n",i);
             }
             else{
+                printf("ng nk %d\n",i);
                 mg=abs(mg-4),yg=abs(yg-4);
                 arr[ai-1][1]=arr[ai-2][1]+inp[i-1][yg];
                 arr[ai-1][2]=arr[ai-2][2]+inp[i-1][yg+1];
             }
         } 
     }
-
 
     for(i=0;i<=n;i++){
         for(j=0;j<=4;j++) printf("%d ",arr[i][j]);
