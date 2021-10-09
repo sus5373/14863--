@@ -5,8 +5,8 @@
 
 int inp[103][7],arr[103][5],chigu[103];
 int main(){
-    freopen("input.txt","r",stdin);
-    freopen("output.txt","w",stdout);
+    freopen("input4.txt","r",stdin);
+    // freopen("output.txt","w",stdout);
 
     int n,k,i,j,ai,mg,yg;
 
@@ -36,7 +36,7 @@ int main(){
             // printf("g == %d\n",i);
         }
         else{
-            if(inp[i-1][yg+1]+inp[i][abs(mg-4)+1]>inp[i-1][abs(yg-4)+1]+inp[i][mg+1]&&arr[ai-2][1]+inp[i-1][yg]+inp[i][abs(mg-4)]<=k&&k-chigu[i+1]>=arr[ai-2][1]+inp[i-1][yg]){
+            if(inp[i-1][yg+1]+inp[i][abs(mg-4)+1]>=inp[i-1][abs(yg-4)+1]+inp[i][mg+1]&&arr[ai-2][1]+inp[i-1][yg]+inp[i][abs(mg-4)]<=k&&k-chigu[i+1]>=arr[ai-2][1]+inp[i-1][yg]){
                 arr[ai-1][1]=arr[ai-2][1]+inp[i-1][yg];
                 arr[ai-1][2]=arr[ai-2][2]+inp[i-1][yg+1];
                 // printf("use pass %d\n",i);
